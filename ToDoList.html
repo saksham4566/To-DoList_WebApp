@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            To-Do List
+        </title>
+    </head>
+    <style>
+        h1{
+            color:#f8f2dc;
+        }
+        header{
+            background-color:#cd4631;
+            padding-top:40px;
+            padding-bottom:80px;
+        }
+        *{
+            text-align:center;
+        }
+        footer{
+            background-color:#cd4631;
+            padding-top:40px;
+            padding-bottom:100px;
+        }
+        body{
+            background-color:#dea47e;
+        }
+        p{
+            color:#f8f2dc;
+        }
+        .saksham{
+            color:#f8f2dc;
+            position:relative;
+            animation-name:FadeIn;
+            animation-duration:2s;
+        }
+        @keyframes FadeIn{
+            from{
+                font-size:10px;
+            }
+            to{
+                font-size:30px;
+            }
+        }
+        input, button{
+            border-radius:20px;
+            padding:0px;
+        }
+        button:hover{
+            border-radius:0px;
+            background-color:aqua;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: linear-gradient(#e81416,#ffa500,#faeb36,#79c314,#487de7,#4b369d,#70369d);
+        }
+        .sakshu{
+            color:black;
+            font-size:20px;
+        }
+    </style>
+    <header>
+        <h1 class="saksham">Welcome to To-do list app!</h1>
+    </header>
+    <body>
+        <h1>Enter the work you want to do!</h1>
+        <p class="sakshu">Enter:<input id="check" placeholder="Enter the task"><button type="button" onclick="CHeck()">Submit</button></p>
+        <p class="sakshu">Enter the task name you have completed:<input id="del" placeholder="Enter deletable task"><button type="button" onclick="Delete()">View and Mark Completed</button></p>
+    </body>
+    <footer>
+        <p>All Rights Reserved. TO-DO LIST App</p>
+    </footer>
+    <script>
+        let array = [];
+        function CHeck(){
+            let ArrayValue= document.getElementById("check").value;
+            if (ArrayValue.trim() !== "") {
+                array.push(ArrayValue);
+                document.getElementById("check").value = ""; 
+                alert("Task added!");
+            }
+        }
+       
+        function Delete(){
+            let deletableItem = document.getElementById("del").value;
+            array = array.filter(item => item !== deletableItem);
+            alert(array);
+        }
+    </script>
+</html>
