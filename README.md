@@ -1,4 +1,5 @@
-#📝 To-Do List Web App
+**📝 To-Do List Web App**
+
 A simple and colorful To-Do List web app built using HTML, CSS, and JavaScript. This project is beginner-friendly and demonstrates core concepts of DOM manipulation, event handling, styling with animations, and responsive interaction.
 
 📸 Preview
